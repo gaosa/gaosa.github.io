@@ -46,32 +46,33 @@
         <a href="/links">Links</a>
       </p>
       <p class="mt-5">
-          I researched on network storage and measurement (including <a href="https://en.wikipedia.org/wiki/Bloom_filter">Bloom filter</a> 
-          and <a href="https://en.wikipedia.org/wiki/Count%E2%80%93min_sketch">Sketch</a>)
-          at Peking University in Tong Yang's Laboratory, and published several papers.
-      </p>
-      <p class="mt-5">
-          <b>Publications</b>
-      </p>
-      <p>
-          <a class="title" href="/publications/tpds2019-diamond">Diamond Sketch: Accurate Per-flow Measurement for Big Streaming Data
-          [TPDS 2019]</a>
-      </p>
-      <p>
-          <a class="title" href="#">Coloring Embedder: a Memory Efficient Data Structure for Answering Multi-set Query
-        [ICDE 2019]</a>
-      </p>
-      <p>
-          <a class="title" href="#">Magic Cube Bloom Filter: Answering Membership Queries for Multiple Sets
-        [BigComp 2019]</a>
-      </p>
-      <p>
-          <a class="title" href="#">ID Bloom Filter: Achieving Faster Multi-set Membership Query in Network Applications
-          [ICC 2018]</a>
-      </p>
-      <p>
-          <a class="title" href="#">Difference Bloom Filter: a Probabilistic Structure for Multi-set Membership Query
-          [ICC 2017]</a>
+        <b>Diamond Sketch: Accurate Per-flow Measurement for Big Streaming Data</b>
+        <br/>
+        IEEE Transactions on Parallel and Distributed Systems (2019)
+        <br/>
+        <span class="content">Yang Tong, Siang Gao, Zhouyi Sun, Yufei Wang, Yulong Shen, Xiaoming Li</span>
+        <br/>
+        <a href="/publications/tpds2019-diamond.pdf">[PDF]</a>
+        <a href="https://ieeexplore.ieee.org/document/8742627">[IEEE Xplore]</a>
+        <br/>
+        <br/>
+        <u>Abstract</u>
+        Per-flow measurement is a critical issue in computer networks,
+        and one of its key tasks is to count the number of packets in each flow.
+        The literature has demonstrated that sketch is the most memory-efficient
+        data structure for the counting task, and is widely used in distributed systems.
+        Existing sketches often use many counters of the same size to record the number
+        of packets in a flow, thus the counters need to be large enough to accommodate
+        the size of the largest flow. Unfortunately, as most flows are small and only a
+        very few flows are large, many counters represent small values, which is a waste
+        of memory. Sketches are often stored in fast but expensive memory, thus it is
+        critical to achieve high memory efficiency. To address this issue, we propose
+        the Diamond sketch, which is composed of atom sketches, and each atom sketch
+        uses small counters. The key idea of Diamond is to dynamically assign an
+        appropriate number of atom sketches to each flow on demand, optimizing memory
+        efficiency. Experimental results show that the Diamond sketch outperforms the
+        best of the five typical sketches by up to 508.3 times in terms of relative
+        error while keeping comparable speed.
       </p>
       <hr class="mt-5"/>
       <p>Made with &#x2764; by gaosa</p>
